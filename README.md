@@ -20,3 +20,6 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 - Webエンジニア(仮)の備忘録 を参考に認証認可とSendGridでのメール認証いれる
   - https://techikoma.com/index.php/2020/06/05/asp-net-core-mvc/
   - https://techikoma.com/index.php/2020/06/11/identity-net-core/
+  - ここも参照
+    - https://docs.microsoft.com/ja-jp/aspnet/core/security/authentication/accconfirm?view=aspnetcore-3.1&tabs=visual-studio
+
