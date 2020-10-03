@@ -17,6 +17,7 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
   - https://docs.microsoft.com/ja-jp/aspnet/core/security/docker-compose-https?view=aspnetcore-3.1
 - 同様にSwaggerいれる
 - 同様にDapperもいれる
+  - 簡単なデータベースアクセスもテストする
 - Webエンジニア(仮)の備忘録 を参考に認証認可とSendGridでのメール認証いれる
   - https://techikoma.com/index.php/2020/06/05/asp-net-core-mvc/
   - https://techikoma.com/index.php/2020/06/11/identity-net-core/
