@@ -10,6 +10,7 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 - https://www.toptal.com/developers/gitignore
 - change LICENSE
 - `dotnet new mvc -o .`
+- `dotnet run` で起動確認
 
 ## 作業メモの作業メモ
 - Stepを参考にDockerコンテナ立てる
