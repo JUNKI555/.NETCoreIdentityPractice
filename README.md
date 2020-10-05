@@ -9,7 +9,7 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 - `touch .gitignore`
 - https://www.toptal.com/developers/gitignore
 - change LICENSE
-- 
+- `dotnet new mvc -o .`
 
 ## 作業メモの作業メモ
 - Stepを参考にDockerコンテナ立てる
