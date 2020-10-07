@@ -18,7 +18,7 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 - `docker-compose up -d` で動作確認
 
 ## 今回は実施してないメモ
-- ディレクトリ構成
+- プロジェクトを分けたディレクトリ構成
   - root
     - App
       - Dockerfile
@@ -29,15 +29,15 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
       - https://docs.microsoft.com/ja-jp/dotnet/core/testing/unit-testing-with-dotnet-test
 
 ## 作業メモの作業メモ
-- Stepを参考にDockerコンテナ立てる
+- [x] Stepを参考にDockerコンテナ立てる
   - HTTPS接続させるのにここ見なきゃかも
   - https://docs.microsoft.com/ja-jp/aspnet/core/security/docker-compose-https?view=aspnetcore-3.1
   - Dockerfile作成
   - https://docs.microsoft.com/ja-jp/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-3.1
-- 同様にSwaggerいれる
-- 同様にDapperもいれる
+- [ ] 同様にSwaggerいれる
+- [ ] 同様にDapperもいれる
   - 簡単なデータベースアクセスもテストする
-- Webエンジニア(仮)の備忘録 を参考に認証認可とSendGridでのメール認証いれる
+- [ ] Webエンジニア(仮)の備忘録 を参考に認証認可とSendGridでのメール認証いれる
   - https://techikoma.com/index.php/2020/06/05/asp-net-core-mvc/
   - https://techikoma.com/index.php/2020/06/11/identity-net-core/
   - ここも参照
