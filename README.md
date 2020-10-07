@@ -16,6 +16,9 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 - `dotnet dev-certs https --trust`
 - アプリケーションだけの `docker-compose.yml` を作成
 - `docker-compose up -d` で動作確認
+- `dotnet add package Swashbuckle.AspNetCore --version 5.6.3`
+- Startup.cs に Swashbuckle.AspNetCore を使うための設定を追記
+- サンプルAPIを追加
 
 ## 今回は実施してないメモ
 - プロジェクトを分けたディレクトリ構成
@@ -34,7 +37,7 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
   - https://docs.microsoft.com/ja-jp/aspnet/core/security/docker-compose-https?view=aspnetcore-3.1
   - Dockerfile作成
   - https://docs.microsoft.com/ja-jp/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-3.1
-- [ ] 同様にSwaggerいれる
+- [x] 同様にSwaggerいれる
 - [ ] 同様にDapperもいれる
   - 簡単なデータベースアクセスもテストする
 - [ ] Webエンジニア(仮)の備忘録 を参考に認証認可とSendGridでのメール認証いれる
