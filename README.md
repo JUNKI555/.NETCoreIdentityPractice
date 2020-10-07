@@ -5,20 +5,25 @@
 https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 
 ## 作業メモ
-- `git clone`
-- `touch .gitignore`
-- https://www.toptal.com/developers/gitignore
-- change LICENSE
-- `dotnet new mvc -o .`
-- `dotnet run` で起動確認
-- アプリケーションの `Dockerfile` 作成
-- `dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p passward`
-- `dotnet dev-certs https --trust`
-- アプリケーションだけの `docker-compose.yml` を作成
-- `docker-compose up -d` で動作確認
-- `dotnet add package Swashbuckle.AspNetCore --version 5.6.3`
-- Startup.cs に Swashbuckle.AspNetCore を使うための設定を追記
-- サンプルAPIを追加
+- プロジェクト準備
+  - `git clone`
+  - `touch .gitignore`
+    - https://www.toptal.com/developers/gitignore
+  - change LICENSE
+  - `dotnet new mvc -o .`
+  - `dotnet run` で起動確認
+- アプリケーションを docker-compose で立ち上げる準備
+  - アプリケーションの `Dockerfile` 作成
+  - `dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p passward`
+  - `dotnet dev-certs https --trust`
+  - アプリケーションだけの `docker-compose.yml` を作成
+  - `docker-compose up -d` で動作確認
+- Swaggerいれる
+  - `dotnet add package Swashbuckle.AspNetCore --version 5.6.3`
+  - Startup.cs に Swashbuckle.AspNetCore を使うための設定を追記
+  - サンプルAPIを追加
+- docker-compose に MySQL など追加
+  - 今ココ
 
 ## 今回は実施してないメモ
 - プロジェクトを分けたディレクトリ構成
