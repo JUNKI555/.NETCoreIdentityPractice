@@ -23,6 +23,9 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
   - Startup.cs に Swashbuckle.AspNetCore を使うための設定を追記
   - サンプルAPIを追加
 - docker-compose に MySQL など追加
+  - adminer, mysql, redis を追加
+  - mysql の文字コード設定を確認するクエリ `show variables like '%char%';`
+- dapper を入れて接続確認
   - 今ココ
 
 ## 今回は実施してないメモ
