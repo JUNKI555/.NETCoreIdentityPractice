@@ -25,7 +25,10 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 - docker-compose に MySQL など追加
   - adminer, mysql, redis を追加
   - mysql の文字コード設定を確認するクエリ `show variables like '%char%';`
-- dapper を入れて接続確認
+- dapper 他使用パッケージを入れて接続確認
+  - `dotnet add package Dapper --version 2.0.35`
+  - `dotnet add package MySql.Data --version 8.0.21`
+  - `dotnet add package CloudStructures --version 2.3.2`
   - 今ココ
 
 ## 今回は実施してないメモ
