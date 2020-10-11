@@ -14,6 +14,9 @@ services:
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_Kestrel__Certificates__Default__Password=password
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - APPSETTING_DBPROVIDERNAME=MySql.Data.MySqlClient
+      - APPSETTING_DBCONNECTION=server=mysql; port=3306; database=step; userid=user; password=user;
+      - APPSETTING_REDISCONNECTION=redis,allowAdmin=true
     volumes:
       - ~/.aspnet/https:/https:ro
     depends_on:

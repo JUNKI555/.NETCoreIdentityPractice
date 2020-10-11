@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
+using DotNETCoreIdentityPractice.Models.Core;
 
 namespace DotNETCoreIdentityPractice
 {
@@ -27,6 +28,13 @@ namespace DotNETCoreIdentityPractice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Configuration Initialize
+            var config = new AppConfiguration();
+            config.ProviderName = Configuration.GetValue<string>("APPSETTING_DBPROVIDERNAME");
+            config.ConnectionString = Configuration.GetValue<string>("APPSETTING_DBCONNECTION");
+            config.RedisConnectionString = Configuration.GetValue<string>("APPSETTING_REDISCONNECTION");
+            services.AddSingleton(config);
+
             services.AddControllersWithViews();
 
             // Register the Swagger generator, defining 1 or more Swagger documents

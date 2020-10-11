@@ -29,7 +29,12 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
   - `dotnet add package Dapper --version 2.0.35`
   - `dotnet add package MySql.Data --version 8.0.21`
   - `dotnet add package CloudStructures --version 2.3.2`
-  - 今ココ
+  - ConnectionString の server はlocalhostではなく container_name(=myql) にする
+  - .env ではなく docker-compose 内の environment に環境変数を書く場合はスペースを含んでいても引用符なしで記述
+    - NG: APPSETTING_DBCONNECTION="server=mysql; database=hoge"
+    - OK: APPSETTING_DBCONNECTION=server=mysql; database=hoge
+- 認証認可を入れてみる
+  - 今ここ
 
 ## 今回は実施してないメモ
 - プロジェクトを分けたディレクトリ構成
@@ -44,13 +49,14 @@ https://docs.microsoft.com/ja-jp/dotnet/core/install/macos
 
 ## 作業メモの作業メモ
 - [x] Stepを参考にDockerコンテナ立てる
-  - HTTPS接続させるのにここ見なきゃかも
-  - https://docs.microsoft.com/ja-jp/aspnet/core/security/docker-compose-https?view=aspnetcore-3.1
-  - Dockerfile作成
-  - https://docs.microsoft.com/ja-jp/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-3.1
+  - [x] HTTPS接続させるのにここ見なきゃかも
+    - https://docs.microsoft.com/ja-jp/aspnet/core/security/docker-compose-https?view=aspnetcore-3.1
+  - [x] Dockerfile作成
+    - https://docs.microsoft.com/ja-jp/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-3.1
 - [x] 同様にSwaggerいれる
-- [ ] 同様にDapperもいれる
-  - 簡単なデータベースアクセスもテストする
+  - [x] 簡単なAPIも用意しSwaggerUI確認
+- [x] 同様にDapperもいれる
+  - [x] 簡単なデータベースアクセスもテストする
 - [ ] Webエンジニア(仮)の備忘録 を参考に認証認可とSendGridでのメール認証いれる
   - https://techikoma.com/index.php/2020/06/05/asp-net-core-mvc/
   - https://techikoma.com/index.php/2020/06/11/identity-net-core/

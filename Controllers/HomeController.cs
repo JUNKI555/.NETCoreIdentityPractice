@@ -1,11 +1,15 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
 using DotNETCoreIdentityPractice.Models;
+using DotNETCoreIdentityPractice.Models.Core;
+using DotNETCoreIdentityPractice.Models.Database.Tables;
 
 namespace DotNETCoreIdentityPractice.Controllers
 {
@@ -20,6 +24,19 @@ namespace DotNETCoreIdentityPractice.Controllers
 
         public IActionResult Index()
         {
+            // Database Connection Test
+            var ConnectionString = AppConfiguration.Current.ConnectionString;
+
+            News[] news;
+            using (var connection = new MySqlConnection(ConnectionString))
+            {
+                connection.Open();
+                news = connection.Query<News>("SELECT * FROM News;").ToArray();
+                connection.Close();
+            }
+
+            ViewData["Message"] = news.FirstOrDefault().Title;
+
             return View();
         }
 
